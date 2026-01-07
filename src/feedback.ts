@@ -14,7 +14,9 @@ export async function generateFeedback({
   const userFeedback = await generateObject({
     model: getModel(),
     system: systemPrompt(),
-    prompt: `Given the following query from the user, ask some follow up questions to clarify the research direction. Return a maximum of ${numQuestions} questions, but feel free to return less if the original query is clear: <query>${query}</query>`,
+    prompt: (process.env.DR_LANG || '').toUpperCase() === 'CN'
+      ? `根据用户的以下查询，提出若干后续问题以澄清研究方向。最多返回 ${numQuestions} 个问题，如原始查询已足够清晰可返回更少： <query>${query}</query>`
+      : `Given the following query from the user, ask some follow up questions to clarify the research direction. Return a maximum of ${numQuestions} questions, but feel free to return less if the original query is clear: <query>${query}</query>`,
     schema: z.object({
       questions: z
         .array(z.string())

@@ -42,3 +42,8 @@ yarn-error.log*
 .DS_Store
 *.pem
 bun.lockb
+
+
+database/passages
+database/shortened_draft
+database/shortened_draft_1
