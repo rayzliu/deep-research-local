@@ -1,0 +1,1 @@
+please refere to the original branch for documentation. specification about this branch will be published shortly. in the meantime, please remeber to add DR_LANG="CN" and OPENAI_API_KEY="..." in the env file for best performance

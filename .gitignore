@@ -47,3 +47,7 @@ bun.lockb
 database/passages
 database/shortened_draft
 database/shortened_draft_1
+
+report*.md
+**__pycache__/**
+**.vscode/**
